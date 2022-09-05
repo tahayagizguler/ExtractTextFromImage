@@ -14,7 +14,7 @@ def multiple():
     folder = (input("path: "))
     for i in os.listdir(folder):
         file = f"{folder}{i}"
-        if file.lower().endswith(('.png', '.jpg', '.jpeg', '.tiff', '.bmp', '.gif','.jfif','.webg')):
+        if file.lower().endswith(('.png', '.jpg', '.jpeg', '.tiff', '.bmp', '.gif','.jfif','.webp')):
             img = Image.open(file)
             print("Processing Image... >>> "+ i)
             text = pytesseract.image_to_string(img)
